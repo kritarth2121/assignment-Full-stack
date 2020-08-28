@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Assignment-9</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-padding-top: 55px;
+            scroll-behavior: smooth;
+        }
+
+        .textCenter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+        }
+
+        /* header {
+            background-color: gray;
+            width: 100%;
+            height: 50px;
+            color: white;
+            position: fixed;
+            top: 0;
+        } */
+
+        #banner {
+            clear: both;
+            width: 100%;
+            height: 550px;
+            /*background-color: aqua;*/
+            color: black;
+            /* margin: 10px; */
+            margin: 10px 10px 10px 0px;
+            min-width: 300px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .circle {
+            width: 20%;
+            height: 275px;
+            margin: 20px;
+            border-radius: 50%;
+            /*background-color: chocolate;*/
+            overflow: hidden;
+        }
+
+        .section_head {
+            font-size: 40px;
+            margin: 20px;
+            font-weight: bold;
+            clear: both;
+        }
+
+        #main_content {
+            margin-left: 20px;
+            width: 50%;
+            height: 550px;
+            margin: 10px;
+            background-color: gray;
+            color: white;
+            overflow: hidden;
+
+        }
+
+        #article_container {
+            width: 50%;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .article {
+            width: 100%;
+            height: 175px;
+            margin: 5px;
+            /*background-color: orangered;*/
+        }
+
+        .box_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .box {
+            padding: 10px;
+            margin: 35px 10px;
+            background-color: white;
+            border: 2px solid #17a498;
+            width: 21.5%;
+            height: 437px;
+            border-radius: 10px;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .box-content {
+            overflow: hidden;
+        }
+
+        footer {
+            width: 100%;
+            height: 120px;
+            background-color: rgb(215, 151, 213);
+            color: black;
+            margin: 0px 10px 10px 10px;
+            color: white;
+        }
+
+
+        /* Css for Practical 8 */
+        /* header li {
+            display: inline-block;
+            list-style: none;
+        }
+
+        header li a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 10px;
+            padding: 8px 25px;
+            font-size: 18px;
+        }
+
+        header li a:hover {
+            background-color: white;
+            color: black;
+        } */
+
+
+        #banner h1 {
+
+            position: absolute;
+            top: 120px;
+            left: 50px;
+            color: white;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .back-img {
+
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #section1 .circle img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #about_text {
+            text-align: justify;
+            font-size: large;
+            margin: 0px 10px;
+        }
+
+        #main_content h2 {
+            padding: 10px;
+        }
+
+        .article {
+
+            background-repeat: no-repeat;
+
+            background-size: cover;
+
+        }
+
+        .row-art {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* .article h3 {
+            position: absolute;
+            top: 500px;
+            font-size: 22px;
+            color: black;
+            text-align: center;
+
+        }  */
+
+        #article1 {
+            background-image: url('../image/p8-2.jpg');
+        }
+
+        #article2 {
+            background-image: url('../image/p8-3.jpeg');
+        }
+
+        #article3 {
+            background-image: url('../image/p8-4.jpg');
+        }
+
+        .article h3 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+
+        .img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .box p {
+            text-align: justify;
+            margin: 5px;
+        }
+
+        .box h4,
+        h1 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .button {
+            border: 1px solid black;
+            padding: 7px;
+            border-radius: 5px;
+            background-color: #318780;
+            text-decoration: none;
+            color: white;
+            display: block;
+            text-align: center;
+            object-position: bottom;
+            margin-top: 5px;
+
+        }
+
+
+        .button:hover {
+            background-color: orange;
+            color: black;
+        }
+
+        .box-img {
+            width: 340px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+
+        #f_text {
+            text-align: center;
+            font-size: larger;
+            font-weight: bold;
+            padding-top: 2%;
+        }
+
+
+        /* Practical-9 css */
+        .checkbtn {
+            position: absolute;
+            right: 30px;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        #check {
+            display: none;
+            /* z-index: -5; */
+        }
+
+
+        @media (max-width: 575.98px) {
+            .row {
+                justify-content: center;
+            }
+
+            .box_container {
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 40px;
+            }
+
+            .box {
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            .circle {
+                width: 75%;
+            }
+
+            .row-art {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #main_content {
+                width: 90%;
+
+            }
+
+            #article_container {
+                width: 90%;
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .circle {
+                width: 40%;
+            }
+
+            .box_container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .box {
+                width: 40%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .circle {
+                width: 40%;
+            }
+
+            .box_container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .box {
+                width: 40%;
+            }
+        }
+
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+        }
+
+        @media (min-width: 1200px) {
+        }
+
+
+        nav {
+            background: grey;
+            height: 70px;
+            width: 100%;
+        }
+
+        label.logo {
+            color: white;
+            font-size: 35px;
+            line-height: 70px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 70px;
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: black;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        a.active,
+        a:hover {
+            background: white;
+            transition: .5s;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: black;
+            float: right;
+            line-height: 70px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+                padding-left: 50px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 858px) {
+            .checkbtn {
+                display: block;
+            }
+
+            ul {
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 70px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            a:hover,
+            a.active {
+                background: white;
+                color: black;
+            }
+
+            #check:checked ~ ul {
+                left: 0;
+                z-index: 3;
+            }
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+<!-- <header class="textCenter">
+    <ul>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about_us">About Us</a></li>
+        <li><a href="#section1">Team</a></li>
+        <li><a href="#technology_used">Technologies</a></li>
+        <li><a href="#f_text">Contact</a></li>
+
+    </ul>
+</header> -->
+
+<nav>
+    <input id="check" type="checkbox">
+    <label class="checkbtn" for="check">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">MyWeb</label>
+    <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#about_us">About us</a></li>
+        <li><a href="#section1">Team</a></li>
+        <li><a href="#technology_used">Technology</a></li>
+        <li><a href="#f_text">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="textCenter" id="banner">
+    <h1>PRACTICAL - 8</h1>
+    <img alt="Img not loaded" class='back-img' src="../image/ass8-banner.jpg">
+</div>
+
+<section>
+    <div id="section1">
+        <div class="section_head textCenter">Team Members</div>
+        <div class="row">
+            <div class="circle" id="circle1"><img alt="Image Not Loaded" class="back-img" src="../image/p8-5.png">
+            </div>
+            <div class="circle" id="circle2"><img alt="Image Not Loaded" class="back-img" src="../image/p8-6.png">
+            </div>
+            <div class="circle" id="circle3"><img alt="Image Not Loaded" class="back-img" src="../image/p8-7.png">
+            </div>
+            <div class="circle" id="circle4"><img alt="Image Not Loaded" class="back-img" src="../image/p8-8.png">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="section_head textCenter" id="about_us">
+    About us
+</div>
+<div class="row-art">
+    <div id="main_content">
+        <h2> About Projects</h2> <br>
+        <div id="about_text">
+            Consequuntur quae debitis magnam, fugiat at veniam aliquam sunt laudantium minus. Fugiat hic reiciendis
+            soluta iste mollitia libero labore assumenda minima autem eaque, impedit voluptas perferendis maxime
+            aliquid dignissimos odio, ullam accusantium! Non qui laboriosam itaque. Laboriosam, possimus explicabo
+            cum adipisci sed earum harum illo voluptate corporis, pariatur ipsa veritatis labore doloribus,
+            voluptatum quas minima beatae minus reiciendis nam. Velit, in quas dignissimos, nesciunt provident earum
+            aut cumque assumenda doloribus quos quae obcaecati eius cupiditate odio laudantium exercitationem esse
+            laborum deserunt temporibus est, eos numquam quam animi. Est, cupiditate quos deleniti facilis assumenda
+            vero, natus debitis quidem eveniet, perferendis illo. Aperiam, magni quod beatae cum, consectetur vel
+            deserunt cumque nobis necessitatibus ullam sint sapiente expedita sed laudantium veniam corrupti hic
+            assumenda explicabo velit! Quidem alias rerum officiis nemo accusamus rem placeat adipisci vel. Aliquid
+            facilis atque nihil, optio nesciunt laboriosam quo quis, quos molestias fuga ducimus commodi ipsum
+            porro. Corrupti alias veniam explicabo ullam magni tenetur itaque aspernatur suscipit ducimus commodi
+            expedita mollitia qui dignissimos ipsa, iusto, at deleniti neque sint unde eos soluta. Ipsa voluptas
+            error consequatur accusamus autem ab voluptate sapiente quibusdam molestias possimus excepturi placeat
+            nemo, incidunt, veniam quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            inventore commodi magni rem earum debitis quaerat consequuntur ab. Debitis aut dolore, officiis ad
+            molestiae ea veritatis, alias perferendis dicta consequuntur quis maiores a, consequatur expedita quia
+            temporibus provident! Delectus rem nesciunt voluptatem aliquid perspiciatis est eius molestias placeat
+            nobis? Mollitia repudiandae obcaecati porro atque impedit labore facilis sed consectetur. Ea quisquam
+            libero saepe. Libero laboriosam cumque voluptatibus laborum architecto velit et ipsam quo, sed
+            aspernatur quibusdam, doloremque repellat aliquid alias
+        </div>
+
+    </div>
+    <div id="article_container">
+        <div class="article" id="article1">
+            <!-- <img class="back-img" src="../image/p8-2.jpg" alt="Image not loaded"> -->
+            <h3>Project-1</h3>
+
+        </div>
+        <div class="article" id="article2">
+            <h3>Project-2</h3>
+            <!-- <img class="back-img" src="../image/p8-4.jpg" alt="Image not loaded"> -->
+        </div>
+        <div class="article" id="article3">
+            <h3>Project-3</h3>
+            <!-- <img class="back-img" src="../image/p8-2.jpg" alt="Image not loaded"> -->
+        </div>
+    </div>
+</div>
+
+<div id="technology_used">
+    <div class="section_head textCenter">Technologies Used</div>
+    <div class="box_container">
+        <div class="box" id="box1">
+            <div class="box-content">
+                <img alt="HTML IMAGE" class="center img" src="../image/html.png">
+                <h4 class="textCenter">Introduction to HTML</h4>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus mollitia veritatis,
+                    deleniti ipsam
+                    aliquid
+                    quam velit? Atque libero quo quibusdam quas, commodi omnis quisquam nobis porro ullam fugiat
+                    unde
+                    expedita,
+                    perferendis ducimus necessitatibus autem dolorum. Corporis accusantium hic ad cupiditate, atque
+                    assumenda
+                    expedita doloribus beatae et, quam esse ut cumque!.......
+                </p>
+            </div>
+            <a class="button" href="aas-5 files/html.html">Read More</a>
+        </div>
+
+        <div class="box" id="box2">
+            <div class="box-content">
+                <img alt="CSS IMAGE" class="center img" src="../image/css.png">
+                <h4 class="textCenter">Introduction to CSS</h4>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus mollitia veritatis,
+                    deleniti ipsam
+                    aliquid
+                    quam velit? Atque libero quo quibusdam quas, commodi omnis quisquam nobis porro ullam fugiat
+                    unde
+                    expedita,
+                    perferendis ducimus necessitatibus autem dolorum. Corporis accusantium hic ad cupiditate, atque
+                    assumenda
+                    expedita doloribus beatae et, quam esse ut cumque!.......
+                </p>
+            </div>
+            <a class="button" href="aas-5 files/css.html">Read More</a>
+        </div>
+
+        <div class="box" id="box3">
+            <div class="box-content">
+                <img alt="JavaScript IMAGE" class="center img" src="../image/javascript-768x256.png">
+                <h4 class="textCenter">Introduction to javascript</h4>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus mollitia veritatis,
+                    deleniti ipsam
+                    aliquid
+                    quam velit? Atque libero quo quibusdam quas, commodi omnis quisquam nobis porro ullam fugiat
+                    unde
+                    expedita,
+                    perferendis ducimus necessitatibus autem dolorum. Corporis accusantium hic ad cupiditate, atque
+                    assumenda
+                    expedita doloribus beatae et, quam esse ut cumque!.......
+                </p>
+            </div>
+            <a class="button" href="aas-5 files/javascript.html">Read More</a>
+        </div>
+
+        <div class="box" id="box4">
+            <div class="box-content">
+                <img alt="bootstrap Image" class="center img" src="../image/bootstrap.png">
+                <h4 class="textCenter">Introduction to bootstrap</h4>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus mollitia veritatis,
+                    deleniti ipsam
+                    aliquid
+                    quam velit? Atque libero quo quibusdam quas, commodi omnis quisquam nobis porro ullam fugiat
+                    unde
+                    expedita,
+                    perferendis ducimus necessitatibus autem dolorum. Corporis accusantium hic ad cupiditate, atque
+                    assumenda
+                    expedita doloribus beatae et, quam esse ut cumque!.......
+                </p>
+            </div>
+            <a class="button" href="aas-5 files/bootstrap.html">Read More</a>
+        </div>
+    </div>
+</div>
+
+<div class="section_head textCenter">Contact</div>
+<footer>
+    <div id="f_text">
+        Website Template for practical-8 &copy;
+        <a href="https://krishnasharma5547.github.io/assignment-Full-stack/" target="_blank">Assignment Index</a>
+        <br> <br>
+        <a href="#">Back to Top</a>
+    </div>
+</footer>
+</body>
+
+</html>
