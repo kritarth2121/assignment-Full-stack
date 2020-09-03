@@ -10,7 +10,7 @@ List of Practicals
   
   4. craete a webasite having list of all practicals and their individual practical Page links 
   
-  5.Create a Web-Page showing the use of Image-Map in the Web Application.
+   5.Create a Web-Page showing the use of Image-Map in the Web Application.
   
   6. Create a Card Layout using CSS layout properties..
   
